@@ -1,0 +1,35 @@
+header {
+    width: 1920px;
+    height: 38px;
+    padding-top: 29px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo {
+    margin-top: 0px;
+    margin-left: 84px;
+    margin-right: 194px;
+}
+
+.home-link {
+    margin-right: 173px;
+}
+
+.calculate-link {
+    margin-right: 110px;
+}
+
+.about-link {
+    margin-right: 125px;
+}
+
+.reviews-link {
+    margin-right: 123px;
+}
