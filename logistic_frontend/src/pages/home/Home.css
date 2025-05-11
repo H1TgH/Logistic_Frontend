@@ -1,0 +1,54 @@
+header {
+    width: 1920px;
+    height: 38px;
+    padding-top: 29px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo {
+    margin-top: 0px;
+    margin-left: 84px;
+    margin-right: 194px;
+}
+
+.home-link {
+    margin-right: 173px;
+}
+
+.calculate-link {
+    margin-right: 110px;
+}
+
+.about-link {
+    margin-right: 125px;
+}
+
+.reviews-link {
+    margin-right: 123px;
+}
+
+main h1 {
+    font-family: 'Abhaya Libre', sans-serif;
+    font-weight: 600;
+    font-size: 250px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.16);
+    padding-top: 465px;
+    padding-left: 159px;
+}
+
+main p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.16);
+    padding-left: 159px;
+}
