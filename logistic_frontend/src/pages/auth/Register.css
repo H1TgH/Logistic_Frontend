@@ -1,14 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .background {
     padding-top: 97px;
 }
 
 .background {
-    width: 1920px;
-    height: 1080px;
     background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.489) 100%),
                 rgba(121, 189, 143, 1);
     background-size: cover;
     background-position: 130px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .register-form {

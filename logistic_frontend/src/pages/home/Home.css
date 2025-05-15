@@ -1,37 +1,15 @@
-header {
-    width: 1920px;
-    height: 38px;
-    padding-top: 29px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 1);
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+html, body {
+  width: 100vw;
+  height: 100vh;
 }
-
-.logo {
-    margin-top: 0px;
-    margin-left: 84px;
-    margin-right: 194px;
-}
-
-.home-link {
-    margin-right: 173px;
-}
-
-.calculate-link {
-    margin-right: 110px;
-}
-
-.about-link {
-    margin-right: 125px;
-}
-
-.reviews-link {
-    margin-right: 123px;
+main {
+    height: 856px
 }
 
 main h1 {
@@ -40,7 +18,7 @@ main h1 {
     font-size: 250px;
     margin: 0;
     color: rgba(0, 0, 0, 0.16);
-    padding-top: 465px;
+    padding-top: 365px;
     padding-left: 159px;
 }
 
@@ -51,4 +29,8 @@ main p{
     margin: 0;
     color: rgba(0, 0, 0, 0.16);
     padding-left: 159px;
+}
+
+* {
+    width: 100% !important;
 }
