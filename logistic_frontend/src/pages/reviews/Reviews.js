@@ -28,10 +28,27 @@ const Reviews = () => {
     setText('');
   };
 
+  const getStats = () => {
+    const total = reviews.length;
+    if (total === 0) return { average: 0, distribution: {}, total: 0 };
+
+    const sum = reviews.reduce((acc, r) => acc + r.rating, 0);
+    const average = (sum / total).toFixed(1);
+
+    const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+    reviews.forEach((r) => {
+      distribution[r.rating]++;
+    });
+
+    return { average, distribution, total };
+  };
+
+  const { average, distribution, total } = getStats();
+
   return (
     <>
       <Header />
-      <main className='bg-wo-image reviews-main'>
+      <main className='bg-wo-image reviews-container'>
         <section className='reviews-section'>
           <h1>Отзывы</h1>
 
@@ -88,7 +105,24 @@ const Reviews = () => {
             ))}
           </div>
         </section>
-        
+
+        <aside className="reviews-summary">
+          <h3>Средняя оценка</h3>
+          <div className="summary-average">
+            <span className="average-score">{average}</span>
+            <span className="star">★</span>
+          </div>
+          <p className='reviews-count-text'>на основании {total} отзывов</p>
+
+          <div className="star-distribution">
+            {[5, 4, 3, 2, 1].map((star) => (
+              <div key={star} className="distribution-row">
+                <span>{star} ★</span>
+                <span>{distribution[star] || 0} отзывов</span>
+              </div>
+            ))}
+          </div>
+        </aside>
       </main>
     </>
   );

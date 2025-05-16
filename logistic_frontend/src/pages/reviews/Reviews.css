@@ -56,7 +56,7 @@
   resize: vertical;
   margin-bottom: 10px;
   border-radius: 12px;
-  width: 1030px !important;
+  width: 970px !important;
 }
 
 .review-form button {
@@ -88,4 +88,48 @@
 .reviews-list .stars {
   font-size: 20px;
   color: gold;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 150px;
+  gap: 40px;
+}
+
+.reviews-summary {
+  flex: 1;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 30px;
+  height: fit-content;
+}
+
+.summary-average {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.reviews-count-text {
+    padding: 0 !important;
+    color: rgb(153, 153, 153);
+    font-size: 16px;
+}
+
+.average-score {
+  font-size: 36px;
+  margin-right: 8px;
+  width: min-content !important;
+}
+
+.star-distribution {
+  margin-top: 20px;
+}
+
+.distribution-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
 }
