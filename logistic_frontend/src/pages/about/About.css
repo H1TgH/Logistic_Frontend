@@ -1,0 +1,103 @@
+.about-page-main {
+    padding-left: 200px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-page-main section h2 {
+    font-size: 26px;
+}
+
+.about-company h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 44px;
+    font-weight: 700;
+    color: black;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.about-company h3 {
+    font-size: 18px;
+    font-weight: 400;
+    width: 1200px;
+}
+
+.about-company p {
+    width: 1200px;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+}
+
+.about-page-main section ul {
+    padding: 25px;
+}
+
+.about-page-main section li {
+    padding-left: 2px;
+    font-size: 17px;
+}
+
+.how-works-list {
+    list-style: decimal;
+}
+
+.about-calculator {
+    padding-bottom: 25px;
+}
+
+.about-calculator h3 {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.about-calculator p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+}
+
+.about-partners {
+    padding-bottom: 25px;
+}
+
+.about-partners h3 {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+.about-partners p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    color: black; 
+}
+
+.about-questions h2 {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+.about-questions p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    color: black;
+}
+
+.contacts-container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}

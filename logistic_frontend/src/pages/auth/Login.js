@@ -4,7 +4,7 @@ import './Login.css';
 const LoginForm = () => {
   return (
     <div className='background'>
-      <div className="register-form">
+      <div className="login-form">
         <div className="underline-wrapper">
           <h2>Вход</h2>
         </div>

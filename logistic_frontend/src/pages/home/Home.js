@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Header /> {}
-      <main>
+      <main className='bg-image home-page-bg'>
         <h1>Logistic</h1>
         <p>
           Онлайн-сервис расчета доставки крупногабаритных грузов по РФ<br />
