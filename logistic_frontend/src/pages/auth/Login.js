@@ -11,7 +11,7 @@ const LoginForm = () => {
         <form>
           <div className="form-group email">
             <p>Почта/Логин</p>
-            <input type="email" required />
+            <input type="text" required />
           </div>
           <div className="form-group password">
             <p>Пароль</p>
