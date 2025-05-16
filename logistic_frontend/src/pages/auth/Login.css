@@ -1,0 +1,12 @@
+.register-form {
+    height: 450px;
+}
+
+.underline-wrapper {
+    width: 450px !important;
+    margin-left: 20px;
+}
+
+button {
+    margin-top: 30px;
+}
