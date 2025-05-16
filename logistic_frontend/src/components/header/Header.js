@@ -16,7 +16,8 @@ const Header = () => {
         <Link className='calculate-link' to="/calculate">Рассчитать стоимость</Link>
         <Link className='about-link' to="/about">О нас</Link>
         <Link className='reviews-link' to="/reviews">Отзывы</Link>
-        <Link className='auth-link' to="/login">Вход/Регистрация</Link>
+        <Link className='login-link' to="/login">Вход</Link>
+        <Link className='register-link' to="/register">Регистрация</Link>
       </nav>
     </header>
   );
