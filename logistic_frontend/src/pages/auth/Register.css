@@ -26,7 +26,7 @@ html, body {
 }
 
 .register-form {
-    width: 480px;
+    width: 480px !important;
     height: 880px;
     padding: 30px;
     background-color: rgba(253, 255, 245, 1);
@@ -109,12 +109,14 @@ html, body {
 }
 
 .form-group input {
-    width: 398px;
+    width: 398px !important;
     height: 45px;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 15px;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(0, 0, 0, 1);
     box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 16px;
 }
 
 .checkbox-group {
@@ -126,6 +128,7 @@ html, body {
 .checkbox-group input {
     margin-left: 36px;
     margin-right: 10px;
+    width: 17px !important;
 }
 
 .checkbox-group label {
@@ -133,10 +136,11 @@ html, body {
     font-size: 15px;
     color: rgba(0, 0, 0, 1);
     font-weight: 400;
+    width: 350px !important;
 }
 
 button {
-    width: 225px;
+    width: 225px !important;
     height: 45px;
     background-color: rgba(121, 189, 143, 1);
     border: solid 1px rgba(0, 0, 0, 1);
@@ -147,7 +151,7 @@ button {
     color: rgba(0, 0, 0, 1);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 137px;
+    margin-left: 120px;
 }
 
 button:hover {
