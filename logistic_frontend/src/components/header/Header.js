@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo.svg';
 
@@ -6,16 +7,16 @@ const Header = () => {
   return (
     <header>
       <div className='logo-nav'>
-        <a className='logo' href='#'>
-        <img src={logo} alt='Logo'/>
-      </a>
+        <Link className='logo' to="/">
+          <img src={logo} alt='Logo' />
+        </Link>
       </div>
       <nav>
-        <a className='home-link' href='#'>Главная</a>
-        <a className='calculate-link' href='#'>Рассчитать стоимость</a>
-        <a className='about-link' href='#'>О нас</a>
-        <a className='reviews-link' href='#'>Отзывы</a>
-        <a className='auth-link' href='#'>Вход/Регистрация</a>
+        <Link className='home-link' to="/">Главная</Link>
+        <Link className='calculate-link' to="/calculate">Рассчитать стоимость</Link>
+        <Link className='about-link' to="/about">О нас</Link>
+        <Link className='reviews-link' to="/reviews">Отзывы</Link>
+        <Link className='auth-link' to="/login">Вход/Регистрация</Link>
       </nav>
     </header>
   );
