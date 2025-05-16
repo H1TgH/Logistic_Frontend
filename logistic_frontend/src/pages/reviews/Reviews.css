@@ -1,0 +1,91 @@
+.btn-open-form {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 60px;
+  width: 200px !important;
+  background-color: #79BD8F;
+  font-weight: 700;
+  border-radius: 15px;
+  border: 1px solid black;
+  height: 45px;
+}
+
+.reviews-main {
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.reviews-section {
+    width: 1150px !important;
+    background-color: #FDFFF5;
+    border-radius: 35px;
+    height: 1000px;
+}
+
+.reviews-section h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin-left: 60px;
+    padding-top: 30px;
+}
+
+.review-form {
+  margin-left: 60px;
+}
+
+.stars {
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.review-form textarea {
+  padding: 15px;
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  width: 1030px !important;
+}
+
+.review-form button {
+  margin-right: 20px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #79BD8F;
+  width: 120px !important;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.empty-reviews-list {
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.reviews-list .review-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.reviews-list .review-item p {
+  margin: 5px 0 0 0;
+}
+
+.reviews-list .stars {
+  font-size: 20px;
+  color: gold;
+}

@@ -139,7 +139,7 @@ html, body {
     width: 350px !important;
 }
 
-button {
+.register-button {
     width: 225px !important;
     height: 45px;
     background-color: rgba(121, 189, 143, 1);

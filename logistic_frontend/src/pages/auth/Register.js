@@ -35,7 +35,7 @@ const RegisterForm = () => {
             Я согласен на обработку персональных данных
           </label>
         </div>
-        <button type="submit">Зарегистрироваться</button>
+        <button className='register-button' type="submit">Зарегистрироваться</button>
       </form>
     </div>
     </div>
