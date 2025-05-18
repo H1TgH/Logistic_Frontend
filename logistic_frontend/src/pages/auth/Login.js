@@ -12,16 +12,16 @@ const LoginForm = () => {
 
     const payload = {
       login,
-      password
+      password,
     };
 
     try {
       const response = await fetch('http://localhost:8000/api/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -31,6 +31,7 @@ const LoginForm = () => {
 
       const data = await response.json();
       localStorage.setItem('token', data.access_token);
+      localStorage.setItem('username', data.username);
       navigate('/');
     } catch (err) {
       console.error('Login error:', err);
@@ -39,7 +40,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className='background'>
+    <div className="background">
       <div className="login-form">
         <div className="underline-wrapper">
           <h2>Вход</h2>
@@ -63,7 +64,9 @@ const LoginForm = () => {
               required
             />
           </div>
-          <button className='login-button' type="submit">Войти</button>
+          <button className="login-button" type="submit">
+            Войти
+          </button>
         </form>
       </div>
     </div>

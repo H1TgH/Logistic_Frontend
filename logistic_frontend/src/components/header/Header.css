@@ -61,3 +61,36 @@ img {
 .login-link {
     margin-right: 110px;
 }
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.username {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 5px;
+  z-index: 999;
+}
+
+.logout-item {
+  margin-top: 8px;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d00;
+}
