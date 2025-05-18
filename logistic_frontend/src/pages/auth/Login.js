@@ -17,7 +17,7 @@ const LoginForm = () => {
             <p>Пароль</p>
             <input type="password" required />
           </div>
-          <button type="submit">Войти</button>
+          <button className='login-button' type="submit">Войти</button>
         </form>
       </div>
     </div>

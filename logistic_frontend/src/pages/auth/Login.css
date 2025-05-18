@@ -28,3 +28,18 @@
 button {
     margin-top: 30px;
 }
+
+.login-button {
+    width: 225px !important;
+    height: 45px;
+    background-color: rgba(121, 189, 143, 1);
+    border: solid 1px rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 120px;
+}
