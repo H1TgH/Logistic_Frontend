@@ -65,11 +65,13 @@ img {
 .user-menu {
   position: relative;
   display: inline-block;
+  width: 200px !important;
 }
 
 .username {
   cursor: pointer;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .dropdown {
@@ -82,10 +84,11 @@ img {
   padding: 10px;
   margin-top: 5px;
   z-index: 999;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logout-item {
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .logout-button {
@@ -93,4 +96,12 @@ img {
   border: none;
   cursor: pointer;
   color: #d00;
+  margin-top: 0;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-item a {
+    font-size: 16px;
+    font-weight: 400;
 }

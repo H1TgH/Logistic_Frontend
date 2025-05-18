@@ -42,4 +42,5 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-left: 120px;
+    margin-top: 30px;
 }
