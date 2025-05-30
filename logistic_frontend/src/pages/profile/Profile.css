@@ -1,0 +1,39 @@
+.profile-flex-container {
+    display: flex;
+    padding-top: 50px;
+}
+
+.profile-user-avatar {
+    border-radius: 50%;
+}
+
+.profile-w-bg {
+    background-color: #FDFFF5;
+}
+
+.user-container {
+    width: 450px !important;
+    margin-left: 50px;
+}
+
+.user-edit-data-container {
+    margin-left: 75px;
+    width: 560px !important;
+    border-radius: 30px;
+}
+
+.user-history-container {
+    margin-left: 60px;
+    width: 560px !important;
+    border-radius: 30px;
+}
+
+.profile-user-reviews-container {
+    border-radius: 30px;
+}
+
+.a {
+    margin: 0;
+    padding: 0;
+    color: black;
+}

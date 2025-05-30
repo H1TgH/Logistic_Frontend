@@ -5,6 +5,7 @@ import Register from './pages/auth/Register';
 import Login from './pages/auth/Login';
 import About from './pages/about/About';
 import Reviews from './pages/reviews/Reviews';
+import Profile from './pages/profile/Profile';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
