@@ -6,6 +6,7 @@ import Login from './pages/auth/Login';
 import About from './pages/about/About';
 import Reviews from './pages/reviews/Reviews';
 import Profile from './pages/profile/Profile';
+import Calculator from './pages/calculator/Calculator'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/calculate" element={<Calculator />} />
       </Routes>
     </BrowserRouter>
   );

@@ -16,6 +16,7 @@ header {
     max-width: 1920px;
     margin: 0 auto;
     display: flex;
+    background-color: #FDFFF5;
 }
 
 nav {

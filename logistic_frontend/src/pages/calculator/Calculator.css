@@ -1,0 +1,115 @@
+.calculator-main-section {
+    padding-top: 30px;
+    padding-left: 120px;
+    padding-bottom: 55px;
+}
+
+.calc-tips-section {
+    width: 1720px !important;
+    height: 150px;
+    background-color: #FDFFF5;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.calc-tip {
+    display: flex;
+}
+
+.calc-tip p{
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.tips-rectangle {
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50%;
+  background-color: #79BD8F;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 4px;
+  font-size: 40px !important;
+  margin-top: 10px !important;
+}
+
+.tip-text {
+    margin-left: 15px !important;
+    width: 480px !important;
+}
+
+.calc-fields-section {
+    width: 1720px !important;
+    height: 400px !important;
+    background-color: #FDFFF5;
+    border-radius: 20px;
+}
+
+.calc-fields-section h1 {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.calc-title-underline {
+    border-bottom: #000000 solid 1px;
+    margin-left: 20px;
+    width: 1680px !important;
+    margin-bottom: 80px;
+}
+
+.calc-direction-container {
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+
+.calc-direction-container input {
+    width: 350px !important;
+    height: 30px;
+    border-radius: 20px;
+    border: #000000 1px solid;
+    background-color: #FDFFF5;
+    padding-left: 10px;
+}
+
+.direction-to {
+    margin-left: 100px;
+}
+
+.calc-package-container {
+    margin-left: 70px;
+}
+
+.calc-package-container input {
+    width: 160px !important;
+    height: 30px;
+    border-radius: 20px;
+    border: #000000 1px solid;
+    background-color: #FDFFF5;
+    padding-left: 10px;
+}
+
+.calc-length-field {
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+.calc-width-field {
+    margin-right: 30px;
+}
