@@ -87,18 +87,34 @@ function Calculator() {
                 <input className='calc-height-field' placeholder="Высота (см)" value={height} onChange={(e) => setHeight(e.target.value)} />
               </div>
 
-              <div>
-                <label><input type="radio" checked={deliveryType === 1} onChange={() => setDeliveryType(1)} /> Склад-Склад</label>
-                <label><input type="radio" checked={deliveryType === 2} onChange={() => setDeliveryType(2)} /> Склад-Дверь</label>
-                <label><input type="radio" checked={deliveryType === 3} onChange={() => setDeliveryType(3)} /> Дверь-Склад</label>
-                <label><input type="radio" checked={deliveryType === 4} onChange={() => setDeliveryType(4)} /> Дверь-Дверь</label>
+              <div className="radio-square calc-deliverytype-container">
+                <label>
+                  <input type="radio" checked={deliveryType === 1} onChange={() => setDeliveryType(1)} />
+                  <span></span>
+                  Склад - Склад
+                </label>
+                <label>
+                  <input type="radio" checked={deliveryType === 2} onChange={() => setDeliveryType(2)} />
+                  <span></span>
+                  Склад - Дверь
+                </label>
+                <label>
+                  <input type="radio" checked={deliveryType === 3} onChange={() => setDeliveryType(3)} />
+                  <span></span>
+                  Дверь - Склад
+                </label>
+                <label>
+                  <input type="radio" checked={deliveryType === 4} onChange={() => setDeliveryType(4)} />
+                  <span></span>
+                  Дверь - Дверь
+                </label>
               </div>
 
-              <div>
+              <div className='calc-calendar-container'>
                 <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
               </div>
 
-              <button onClick={handleSubmit}>Рассчитать</button>
+              <button className='calc-calculate' onClick={handleSubmit}>Рассчитать</button>
               </div>
             </div>
         </section>
