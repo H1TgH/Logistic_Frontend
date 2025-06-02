@@ -7,8 +7,8 @@ import Header from '../../components/header/Header';
 function Calculator() {
   const navigate = useNavigate();
 
-  const [fromCode, setFromCode] = useState('');
-  const [toCode, setToCode] = useState('');
+  const [fromCity, setFromCity] = useState('');
+  const [toCity, setToCity] = useState('');
   const [weight, setWeight] = useState('');
   const [length, setLength] = useState('');
   const [width, setWidth] = useState('');
@@ -16,39 +16,33 @@ function Calculator() {
   const [deliveryType, setDeliveryType] = useState(1);
   const [date, setDate] = useState('');
 
-  const handleSubmit = async () => {
-    const payload = {
-      service: 'cdek',
-      from_location: { code: parseInt(fromCode) },
-      to_location: { code: parseInt(toCode) },
-      package: {
+  const handleSubmit = () => {
+  if (!fromCity || !toCity || !weight || !length || !width || !height) {
+    alert('Пожалуйста, заполните все поля.');
+    return;
+  }
+
+  const payload = {
+    service: 'cdek',
+    from_location: { city_name: fromCity },
+    to_location: { city_name: toCity },
+    packages: [
+      {
         weight: parseInt(weight),
         length: parseInt(length),
         width: parseInt(width),
         height: parseInt(height)
-      },
-      delivery_type: parseInt(deliveryType),
-      date: date || undefined
-    };
-
-    try {
-      const response = await fetch('http://localhost:8000/api/v1/public/calculate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        navigate('/result', { state: result });
-      } else {
-        alert('Ошибка: ' + JSON.stringify(result.detail));
       }
-    } catch (err) {
-      alert('Ошибка подключения к серверу');
-    }
+    ],
+    delivery_type: parseInt(deliveryType),
+    date: date || undefined,
+    currency: 1,
+    lang: 'rus'
   };
+
+  navigate('/loading', { state: { payload } });
+};
+
 
   return (
     <>
@@ -85,17 +79,17 @@ function Calculator() {
                 <input
                   className='direction-from'
                   placeholder='Откуда'
-                  value={fromCode}
-                  onChange={(e) => setFromCode(e.target.value)}
+                  value={fromCity}
+                  onChange={(e) => setFromCity(e.target.value)}
                 />
 
                 <button
                   type='button'
                   className='calc-swap-button'
                   onClick={() => {
-                    const temp = fromCode;
-                    setFromCode(toCode);
-                    setToCode(temp);
+                    const temp = fromCity;
+                    setFromCity(toCity);
+                    setToCity(temp);
                   }}
                   aria-label='Поменять направления местами'
                 >
@@ -105,8 +99,8 @@ function Calculator() {
                 <input
                   className='direction-to'
                   placeholder='Куда'
-                  value={toCode}
-                  onChange={(e) => setToCode(e.target.value)}
+                  value={toCity}
+                  onChange={(e) => setToCity(e.target.value)}
                 />
               </div>
 
