@@ -16,7 +16,7 @@ const LoginForm = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/api/login', {
+      const response = await fetch('http://localhost:8000/api/v1/public/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
