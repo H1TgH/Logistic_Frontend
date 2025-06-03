@@ -74,6 +74,7 @@
 }
 
 .calc-direction-container {
+    width: 350px !important;
     margin-left: 70px;
     margin-bottom: 30px;
     display: flex;

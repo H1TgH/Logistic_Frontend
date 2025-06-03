@@ -3,12 +3,17 @@ import './Calculator.css';
 import { useNavigate } from 'react-router-dom';
 import swapArrow from '../../assets/swap-arrow.svg';
 import Header from '../../components/header/Header';
+import { AddressSuggestions } from 'react-dadata';
+import 'react-dadata/dist/react-dadata.css'
+
+
+const token = 'ea8735bedf0b2f9eb7b423200c7c30cd6960b5cd';
 
 function Calculator() {
   const navigate = useNavigate();
 
-  const [fromCity, setFromCity] = useState('');
-  const [toCity, setToCity] = useState('');
+  const [fromCity, setFromCity] = useState(null); 
+  const [toCity, setToCity] = useState(null);     
   const [weight, setWeight] = useState('');
   const [length, setLength] = useState('');
   const [width, setWidth] = useState('');
@@ -17,15 +22,21 @@ function Calculator() {
   const [date, setDate] = useState('');
 
   const handleSubmit = () => {
-  if (!fromCity || !toCity || !weight || !length || !width || !height) {
-    alert('Пожалуйста, заполните все поля.');
-    return;
+  if (!fromCity?.data || !toCity?.data || !weight || !length || !width || !height) {
+  alert('Пожалуйста, заполните все поля корректно.');
+  return;
   }
 
   const payload = {
     service: 'cdek',
-    from_location: { city_name: fromCity },
-    to_location: { city_name: toCity },
+    from_location: {
+      city_name: fromCity.data.city,
+      fias_id: fromCity.data.city_fias_id
+    },
+    to_location: {
+      city_name: toCity.data.city,
+      fias_id: toCity.data.city_fias_id
+    },
     packages: [
       {
         weight: parseInt(weight),
@@ -76,11 +87,12 @@ function Calculator() {
           <div className='calc-flex-container'>
             <div className='calc-flex-fields'>
               <div className='calc-direction-container'>
-                <input
-                  className='direction-from'
-                  placeholder='Откуда'
+                <AddressSuggestions
+                  token={token}
                   value={fromCity}
-                  onChange={(e) => setFromCity(e.target.value)}
+                  onChange={setFromCity}
+                  placeholder="Откуда"
+                  inputProps={{ className: 'direction-from' }}
                 />
 
                 <button
@@ -96,11 +108,12 @@ function Calculator() {
                   <img src={swapArrow} alt='Поменять местами' className='swap-icon' />
                 </button>
 
-                <input
-                  className='direction-to'
-                  placeholder='Куда'
+                <AddressSuggestions
+                  token={token}
                   value={toCity}
-                  onChange={(e) => setToCity(e.target.value)}
+                  onChange={setToCity}
+                  placeholder="Куда"
+                  inputProps={{ className: 'direction-to' }}
                 />
               </div>
 
