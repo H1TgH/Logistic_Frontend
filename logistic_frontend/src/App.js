@@ -7,7 +7,7 @@ import About from './pages/about/About';
 import Reviews from './pages/reviews/Reviews';
 import Profile from './pages/profile/Profile';
 import Calculator from './pages/calculator/Calculator'
-import Loading from './pages/loading/loading';
+import Loading from './pages/loading/Loading';
 
 
 function App() {

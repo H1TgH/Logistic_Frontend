@@ -1,9 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './Loading.css';
 
 function LoadingPage() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [dots, setDots] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots((prev) => (prev === 3 ? 1 : prev + 1));
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,8 +42,18 @@ function LoadingPage() {
   }, [location.state, navigate]);
 
   return (
-    <div style={{ padding: '50px', textAlign: 'center', fontSize: '24px' }}>
-      <p>Загрузка данных...</p>
+    <div style={{
+      height: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: '24px',
+    }}>
+      <div className="loader"></div>
+      <p style={{ marginTop: '20px' }}>
+        Ищем лучшие предложения для Вас{'.'.repeat(dots)}
+      </p>
     </div>
   );
 }
