@@ -8,6 +8,7 @@ import Reviews from './pages/reviews/Reviews';
 import Profile from './pages/profile/Profile';
 import Calculator from './pages/calculator/Calculator'
 import Loading from './pages/loading/Loading';
+import Result from './pages/result/Result';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/calculate" element={<Calculator />} />
         <Route path="/loading" element={<Loading />} />
+        <Route path="/result" element={<Result />} />
       </Routes>
     </BrowserRouter>
   );

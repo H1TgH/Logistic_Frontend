@@ -2,7 +2,7 @@
   border: 8px solid #f3f3f3; /* Светлый фон */
   border-top: 8px solid #41da81; /* Цвет вращения */
   border-radius: 50%;
-  width: 60px;
+  width: 60px !important;
   height: 60px;
   animation: spin 1s linear infinite;
 }
@@ -11,4 +11,8 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.loading-page-text {
+  width: 400px !important;
 }

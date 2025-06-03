@@ -1,0 +1,33 @@
+.result-main-section {
+    padding: 40px 200px 100px 200px;
+
+}
+
+.input-summary {
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th, .results-table td {
+  border: 1px solid #d1d5db;
+  padding: 12px;
+  text-align: center;
+}
+
+.results-table th {
+  background-color: #f9fafb;
+  font-weight: bold;
+}
+
+.service-column {
+  text-align: left;
+  padding-left: 16px;
+}

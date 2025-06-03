@@ -51,7 +51,7 @@ function LoadingPage() {
       fontSize: '24px',
     }}>
       <div className="loader"></div>
-      <p style={{ marginTop: '20px' }}>
+      <p className='loading-page-text' style={{ marginTop: '20px'}}>
         Ищем лучшие предложения для Вас{'.'.repeat(dots)}
       </p>
     </div>
