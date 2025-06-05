@@ -99,24 +99,32 @@ function Result() {
           </div>
         </section>
         <section className="result-table-section">
-          <div className="results-list">
-            {data?.results?.length > 0 ? (
-              data.results.map((result, index) => (
-                <div key={index} className="result-card">
-                  <div className="result-price-column">{result.delivery_sum} ₽</div>
-                  <div className="result-date-column">
-                    {result.period_min} - {result.period_max} дн. (
-                    {formatDate(shipmentDate, result.period_min)} -{' '}
-                    {formatDate(shipmentDate, result.period_max)})
-                  </div>
-                  <div className="result-service-column">{result.service_name}</div>
+        <div className="results-list">
+          {data?.results?.length > 0 ? (
+            data.results.map((result, index) => (
+              <div key={index} className="result-card">
+                <div className="result-price-column">{result.delivery_sum} ₽</div>
+                <div className="result-date-column">
+                  {result.period_min} - {result.period_max} дн. (
+                  {formatDate(shipmentDate, result.period_min)} -{' '}
+                  {formatDate(shipmentDate, result.period_max)})
                 </div>
-              ))
-            ) : (
-              <div className="no-results">Нет данных</div>
-            )}
-          </div>
-        </section>
+                <div className="result-service-column">
+                  <a href={result.service_url} target="_blank" rel="noopener noreferrer" className="service-link">
+                    <img
+                      src={result.service_logo}
+                      alt={result.service_name}
+                      className="service-logo"
+                    />
+                  </a>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="no-results">Нет данных</div>
+          )}
+        </div>
+      </section>
       </main>
     </>
   );
