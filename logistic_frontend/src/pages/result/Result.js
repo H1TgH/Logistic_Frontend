@@ -44,7 +44,7 @@ function Result() {
             />
             <div className="delivery-type-res">
               <label>
-                <span className='del-type-res'>
+                <span className="del-type-res">
                   {data.delivery_type === 1
                     ? 'Склад - Склад'
                     : data.delivery_type === 2
@@ -98,28 +98,24 @@ function Result() {
             />
           </div>
         </section>
-        <section className='result-table-section'>
-          <div className="results-table">
-          <table>
-            <tbody>
-              {data?.delivery_sum ? (
-                <tr>
-                  <td className="result-price-column">{data.delivery_sum} ₽</td>
-                  <td className="result-date-column">
-                    {data.period_min} - {data.period_max} дн. (
-                    {formatDate(shipmentDate, data.period_min)} -{' '}
-                    {formatDate(shipmentDate, data.period_max)})
-                  </td>
-                  <td className="result-service-column">{data.service_name}</td>
-                </tr>
-              ) : (
-                <tr>
-                  <td colSpan="3">Нет данных</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
+        <section className="result-table-section">
+          <div className="results-list">
+            {data?.results?.length > 0 ? (
+              data.results.map((result, index) => (
+                <div key={index} className="result-card">
+                  <div className="result-price-column">{result.delivery_sum} ₽</div>
+                  <div className="result-date-column">
+                    {result.period_min} - {result.period_max} дн. (
+                    {formatDate(shipmentDate, result.period_min)} -{' '}
+                    {formatDate(shipmentDate, result.period_max)})
+                  </div>
+                  <div className="result-service-column">{result.service_name}</div>
+                </div>
+              ))
+            ) : (
+              <div className="no-results">Нет данных</div>
+            )}
+          </div>
         </section>
       </main>
     </>

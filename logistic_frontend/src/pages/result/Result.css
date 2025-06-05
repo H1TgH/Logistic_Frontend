@@ -5,7 +5,7 @@
 .input-summary {
   background-color: #FDFFF5;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -53,16 +53,7 @@
 .result-table-section {
     padding: 30px 30px 100px 30px;
     background-color: #FDFFF5;
-}
-
-.results-table table {
-  border-collapse: separate; /* Разделяем границы для корректного border-radius */
-  border-spacing: 0; /* Убираем лишние отступы между ячейками */
-  border-radius: 8px; /* Скругление углов таблицы */
-  overflow: hidden; /* Обрезаем содержимое за пределами скруглений */
-  width: 100%; /* Убедимся, что таблица занимает всю доступную ширину */
-  background-color: #fff; /* Фон таблицы для контраста */
-  border: 1.5px solid #000000; /* Граница для таблицы */
+    border-radius: 20px;
 }
 
 .results-table td {
@@ -91,9 +82,68 @@
 }
 
 .result-date-column {
-  width: 50%; /* Пример ширины для срока доставки */
+  width: 40% !important; /* Пример ширины для срока доставки */
 }
 
 .result-service-column {
-  width: 30%; /* Пример ширины для сервиса */
+  width: 40% !important; /* Пример ширины для сервиса */
+}
+
+.result-table-section {
+  margin-top: 20px;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Отступ между карточками */
+}
+
+.result-card {
+  display: flex;
+  justify-content: flex-start; /* Изменяем на flex-start, чтобы элементы шли подряд */
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Скругление углов */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Лёгкая тень */
+}
+
+.result-card > div {
+  padding: 0 10px; /* Отступы внутри каждого столбца */
+}
+
+.result-card > div:not(:last-child) {
+  border-right: 1px solid #000000; /* Вертикальный разделитель между столбцами */
+}
+
+.result-price-column {
+  flex: 1;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 100px; /* Минимальная ширина для читаемости */
+}
+
+.result-date-column {
+  flex: 2;
+  text-align: center;
+  min-width: 200px; /* Увеличенная ширина для даты */
+}
+
+.result-service-column {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  min-width: 100px; /* Минимальная ширина для сервиса */
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+.result-card div {
+    text-align: center;
 }
