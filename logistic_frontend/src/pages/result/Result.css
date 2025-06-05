@@ -1,33 +1,99 @@
 .result-main-section {
     padding: 40px 200px 100px 200px;
-
 }
 
 .input-summary {
-  background-color: #f3f4f6;
+  background-color: #FDFFF5;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
+.right-arrow {
+    cursor: auto;
+}
+
+.result-direction {
+    margin-left: 420px;
+}
+
+.result-direction input {
+    background-color: #D9D9D9;
+}
+
+.right-arrow-icon {
+    width: 50px !important;
+    height: 30px;
+}
+
+.del-type-res {
+    width: 200px !important;
+    display: block;
+    font-size: 20px;
+}
+
+.res-dir-cont {
+    padding-left: 270px !important;
+}
+
+.delivery-type-res {
+    margin-left: 60px;
+}
+
+.calc-package-container input {
+    margin: 0;
+    margin-right: 50px;
+}
+
+.res-pack-cont {
+    padding-left: 100px;
+}
+
+.result-table-section {
+    padding: 30px 30px 100px 30px;
+    background-color: #FDFFF5;
+}
+
 .results-table table {
-  width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* Разделяем границы для корректного border-radius */
+  border-spacing: 0; /* Убираем лишние отступы между ячейками */
+  border-radius: 8px; /* Скругление углов таблицы */
+  overflow: hidden; /* Обрезаем содержимое за пределами скруглений */
+  width: 100%; /* Убедимся, что таблица занимает всю доступную ширину */
+  background-color: #fff; /* Фон таблицы для контраста */
+  border: 1.5px solid #000000; /* Граница для таблицы */
 }
 
-.results-table th, .results-table td {
-  border: 1px solid #d1d5db;
-  padding: 12px;
-  text-align: center;
+.results-table td {
+  padding: 12px; /* Отступы внутри ячеек */
+  text-align: left; /* Выравнивание текста */
+  border-bottom: 1px solid #000000; /* Граница между строками */
 }
 
-.results-table th {
-  background-color: #f9fafb;
-  font-weight: bold;
+.results-table td {
+  border-right: 1px solid #000000; /* Граница между столбцами */
 }
 
-.service-column {
-  text-align: left;
-  padding-left: 16px;
+/* Убираем правую границу у последней ячейки в строке */
+.results-table td:last-child {
+  border-right: none;
+}
+
+/* Убираем нижнюю границу у последней строки */
+.results-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Специфичные стили для твоих классов */
+.result-price-column {
+  width: 20%; /* Пример ширины для стоимости */
+}
+
+.result-date-column {
+  width: 50%; /* Пример ширины для срока доставки */
+}
+
+.result-service-column {
+  width: 30%; /* Пример ширины для сервиса */
 }

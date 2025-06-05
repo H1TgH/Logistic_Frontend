@@ -27,7 +27,7 @@ function LoadingPage() {
         const result = await response.json();
 
         if (response.ok) {
-          navigate('/result', { state: result });
+          navigate('/result', { state: { request: result } });
         } else {
           alert('Ошибка: ' + JSON.stringify(result.detail));
           navigate('/');
