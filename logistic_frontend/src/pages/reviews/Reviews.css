@@ -47,7 +47,7 @@
 }
 
 .star.filled {
-  color: gold;
+  color: gold !important;
 }
 
 .review-form textarea {
@@ -87,7 +87,6 @@
 
 .reviews-list .stars {
   font-size: 20px;
-  color: gold;
 }
 
 .reviews-container {
@@ -132,4 +131,114 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
+}
+
+.aside-star {
+  color:gold;
+}
+
+.summary-average span.star {
+  color: gold;
+}
+
+.reviews-list {
+  margin-left: 60px;
+}
+
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.review-user {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.stars {
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 18px;
+  cursor: default;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-date {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.review-text {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Стили для ответов */
+.reply-item {
+  margin-left: 20px;
+  padding-left: 15px;
+  border-left: 2px solid #eee;
+  margin-top: 10px;
+}
+
+.reply-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.reply-user {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.reply-date {
+  color: #666;
+  font-size: 0.8em;
+}
+
+.reply-text {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+div.stars {
+  width: 100px !important;
+}
+
+span.review-user {
+  width: 60px !important;
+  font-size: 18px;
+}
+
+span.review-date {
+  width: 100px !important;
+}
+
+p.review-text {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.review-item {
+  width: 800px !important;
+  margin-bottom: 30px;
+  padding-bottom: 20px !important;
 }
